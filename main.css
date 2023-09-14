@@ -1,0 +1,856 @@
+:root {
+   --blue: #19BEBA;
+   --dark-blue: #0C6462;
+   --white-blue: #AEEAE7;
+   --light-blue: #d1eaf5;
+   --purple: #810E6C;
+   --white-purple: #B22ED1;
+   --dark-purple: #530C64;
+   --red: #e74c3c;
+   --green: #32CD32;
+   --black: #333;
+   --dark-black: #000000;
+   --white: #fff;
+   --light-bg: #eee;
+   --grey: #4c4c4c;
+   --dark-grey: #45484C;
+   --light-grey: #555;
+   --aliceblue: #F0F8FF;
+   --box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+   width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+   background-color: var(--blue);
+}
+
+.btn,
+.delete-btn {
+   width: 100%;
+   border-radius: 5px;
+   padding: 10px 30px;
+   color: var(--white);
+   display: inline-block;
+   text-align: center;
+   cursor: pointer;
+   font-size: 20px;
+   margin-top: 10px;
+   transition: background-color 0.3s ease;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+   border: none;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: bold;
+}
+
+.btn {
+   background-color: var(--blue);
+}
+
+.btn:hover {
+   background-color: var(--dark-blue);
+}
+
+.delete-btn {
+   background-color: var(--purple);
+}
+
+.delete-btn:hover {
+   background-color: var(--dark-purple);
+}
+
+.message {
+   margin: 10px 0;
+   width: 100%;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   background-color: var(--red);
+   color: var(--white);
+   font-size: 20px;
+}
+
+.messageSuccessful {
+   margin: 10px 0;
+   width: 100%;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   background-color: var(--green);
+   color: var(--white);
+   font-size: 20px;
+}
+
+.message-small {
+   margin: 10px 0;
+   width: 100%;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   background-color: var(--red);
+   color: var(--white);
+   font-size: 20px;
+}
+
+.login {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.login form {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 500px;
+   border-radius: 5px;
+}
+
+.login form h3 {
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: var(--white);
+   text-transform: uppercase;
+}
+
+.login form h3 a {
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: var(--white-purple);
+   text-transform: uppercase;
+}
+
+.login form h3 a:hover {
+   text-decoration: underline;
+}
+
+.login form .box {
+   width: 100%;
+   border-radius: 5px;
+   padding: 12px 14px;
+   font-size: 18px;
+   color: var(--black);
+   margin: 10px 0;
+   background-color: var(--light-bg);
+}
+
+.login form p {
+   margin-top: 15px;
+   font-size: 20px;
+   color: var(--white);
+}
+
+.login form p a {
+   color: var(--white-purple);
+}
+
+.login form p a:hover {
+   text-decoration: underline;
+}
+
+.register {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.register form {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 500px;
+   border-radius: 5px;
+}
+
+.register form h3 {
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: var(--white);
+   text-transform: uppercase;
+}
+
+.register form .box {
+   width: 100%;
+   border-radius: 5px;
+   padding: 12px 14px;
+   font-size: 18px;
+   color: var(--black);
+   margin: 10px 0;
+   background-color: var(--light-bg);
+}
+
+.register form p {
+   margin-top: 15px;
+   font-size: 20px;
+   color: var(--white);
+}
+
+.register form p a {
+   color: var(--white-purple);
+}
+
+.register form p a:hover {
+   text-decoration: underline;
+}
+
+.myprofile {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.myprofile .profile {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 400px;
+   border-radius: 5px;
+}
+
+.myprofile .profile img {
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 5px;
+}
+
+.myprofile .profile h1 {
+   color: var(--white);
+}
+
+.myprofile .profile h3 {
+   margin: 5px 0;
+   font-size: 20px;
+   color: var(--white);
+}
+
+.myprofile .profile p {
+   margin-top: 20px;
+   color: var(--white);
+   font-size: 20px;
+}
+
+.myprofile .profile p a {
+   color: var(--red);
+}
+
+.myprofile .profile p a:hover {
+   text-decoration: underline;
+}
+
+.profile-update {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.profile-update form {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 700px;
+   border-radius: 5px;
+}
+
+.profile-update form h3 {
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: var(--white);
+   text-transform: uppercase;
+}
+
+.profile-update form img {
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 5px;
+}
+
+.profile-update form .flex {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   gap: 15px;
+}
+
+.profile-update form .flex .input {
+   width: 49%;
+}
+
+.profile-update form .flex .input span {
+   text-align: left;
+   display: block;
+   margin-top: 15px;
+   font-size: 17px;
+   color: var(--white);
+}
+
+.profile-update form .flex .input .box {
+   width: 100%;
+   border-radius: 5px;
+   background-color: var(--light-bg);
+   padding: 12px 14px;
+   font-size: 17px;
+   color: var(--black);
+   margin-top: 10px;
+}
+
+.profile-update form .flex2 {
+   justify-content: space-between;
+   margin-bottom: 20px;
+   gap: 15px;
+}
+
+.profile-update form .flex2 span {
+   text-align: left;
+   display: block;
+   margin-top: 15px;
+   font-size: 17px;
+   color: var(--white);
+}
+
+.profile-update form .flex2 textarea {
+   width: 100%;
+   border-radius: 5px;
+   background-color: var(--light-bg);
+   padding: 12px 14px;
+   font-size: 17px;
+   color: var(--black);
+   margin-top: 10px;
+}
+
+.profile-update form .flex img {
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-top: 40%;
+
+}
+
+@media (max-width:650px) {
+   .profile-update form .flex {
+      flex-wrap: wrap;
+      gap: 0;
+   }
+
+   .profile-update form .flex .input {
+      width: 100%;
+   }
+}
+
+.topnav {
+
+   overflow: hidden;
+   background-color: var(--black);
+   padding: 20px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+}
+
+.topnav a {
+   color: white;
+   padding: 10px;
+   text-decoration: none;
+   font-size: 20px;
+   margin: 0 10px;
+   transition: background-color 0.3s ease;
+}
+
+.topnav a:hover {
+   background-color: var(--light-grey);
+}
+
+.topnav a.active {
+   background-color: var(--grey);
+   color: white;
+}
+
+.topnav-right {
+   float: right;
+}
+
+.topnav-right img {
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: -10px;
+}
+
+
+.author {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 150px;
+   background-color: var(--black);
+   color: var(--white);
+   font-size: 14px;
+   text-align: left;
+   padding: 5px;
+}
+
+.link {
+   color: var(--red);
+   cursor: pointer;
+   font-size: inherit;
+   letter-spacing: 2px;
+   font-weight: inherit;
+}
+
+.profile-select {
+   position: relative;
+   width: 100%;
+   margin-bottom: 20px;
+   height: 40px;
+   border-radius: 5px;
+   background-color: var(--light-bg);
+   border: 1px solid var(--black);
+   overflow: hidden;
+}
+
+.profile-select::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 100%;
+   background-color: var(--blue);
+   pointer-events: none;
+   transition: all 0.3s ease;
+   z-index: 2;
+}
+
+.profile-select select {
+   width: 100%;
+   height: 100%;
+   background-color: transparent;
+   border: none;
+   outline: none;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   padding: 0 10px;
+   color: var(--black);
+   font-size: 18px;
+   cursor: pointer;
+   z-index: 3;
+}
+
+.profile-select select option {
+   background-color: var(--light-bg);
+   color: var(--black);
+   font-size: 18px;
+}
+
+.profile-select:hover::before {
+   transform: translateX(-100%);
+}
+
+.my-messages {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.my-messages form {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 700px;
+   text-align: center;
+   border-radius: 5px;
+}
+
+.my-messages form h3 {
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: var(--white);
+   text-transform: uppercase;
+}
+
+.my-messages form .messages {
+   width: 100%;
+   border-radius: 5px;
+   background-color: var(--dark-grey);
+   padding: 12px 14px;
+   font-size: 17px;
+   color: var(--white);
+   margin-top: 10px;
+}
+
+.my-messages form .messages .small-button {
+   display: inline-block;
+   padding: 0.25em 0.5em;
+   font-size: 0.8em;
+   font-weight: bold;
+   text-align: center;
+   text-decoration: none;
+   background-color: var(--blue);
+   color: var(--white);
+   border: none;
+   border-radius: 0.25em;
+   cursor: pointer;
+}
+
+.my-messages form .messages .small-button:hover {
+   background-color: var(--dark-blue);
+}
+
+.my-messages form .messages .small-button:focus {
+   outline: none;
+   box-shadow: 0 0 0 0.2em rgba(0, 123, 255, 0.5);
+}
+
+.my-messages form .messages .small-button:active {
+   transform: translateY(0.1em);
+}
+
+.my-messages form .flex {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   gap: 15px;
+}
+
+.my-messages form .flex span {
+   text-align: left;
+   display: block;
+   margin-top: 15px;
+   font-size: 17px;
+   color: var(--white);
+}
+
+.my-messages form .flex .box {
+   width: 100%;
+   border-radius: 5px;
+   background-color: var(--light-bg);
+   padding: 12px 14px;
+   font-size: 17px;
+   color: var(--black);
+   margin-top: 10px;
+}
+
+.my-messages form .flex .boxsender {
+   background-color: var(--white-purple);
+   color: var(--dark-black);
+   border-radius: 5px;
+   padding: 10px;
+   margin: 5px;
+   float: left;
+   max-width: 70%;
+}
+
+/* Styling for recipient box */
+.my-messages form .flex .boxrecipient {
+   background-color: var(--white-blue);
+   color: var(--dark-black);
+   border-radius: 5px;
+   padding: 10px;
+   margin: 5px;
+   float: right;
+   max-width: 70%;
+}
+
+/* Styling for the flex container */
+.my-messages form .flex .flex-container {
+   display: flex;
+   flex-wrap: nowrap;
+   background-color: var(--light-blue);
+   color: var(--dark-black);
+   border-radius: 5px;
+   padding: 10px;
+   margin: 5px;
+   width: calc(100% - 40px);
+   overflow-y: auto;
+   max-height: 200px;
+}
+
+.my-messages .my-messages-select {
+   position: relative;
+   width: 100%;
+   margin-bottom: 20px;
+   height: 40px;
+   border-radius: 5px;
+   background-color: var(--light-bg);
+   border: 1px solid var(--black);
+   overflow: hidden;
+}
+
+.my-messages .my-messages-select::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 100%;
+   background-color: var(--blue);
+   pointer-events: none;
+   transition: all 0.3s ease;
+   z-index: 2;
+}
+
+.my-messages .my-messages-select select {
+   width: 100%;
+   height: 100%;
+   background-color: transparent;
+   border: none;
+   outline: none;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   padding: 0 10px;
+   color: var(--black);
+   font-size: 18px;
+   cursor: pointer;
+   z-index: 3;
+}
+
+.my-messages .my-messages-select select option {
+   background-color: var(--light-bg);
+   color: var(--black);
+   font-size: 18px;
+}
+
+.my-messages .my-messages-select:hover::before {
+   transform: translateX(-100%);
+}
+
+.games {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.games .profile {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 50%;
+   border-radius: 5px;
+}
+
+.games .profile h1 {
+   color: var(--white);
+}
+
+.games .profile p {
+   margin-top: 20px;
+   color: var(--white);
+   font-size: 20px;
+}
+
+.games .profile h1 a {
+   color: var(--white);
+   text-decoration: underline;
+}
+
+.searcher {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.searcher form {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 700px;
+   text-align: center;
+   border-radius: 5px;
+}
+
+.searcher form h3 {
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: var(--white);
+   text-transform: uppercase;
+}
+
+.searcher form .flex {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   gap: 15px;
+}
+
+.searcher form .flex .input {
+   width: 49%;
+}
+
+.searcher form .flex .input span {
+   text-align: left;
+   display: block;
+   margin-top: 15px;
+   font-size: 17px;
+   color: var(--white);
+}
+
+.searcher form .flex .input span a{
+   color: var(--white-purple);
+}
+.searcher form .flex .input .box {
+   width: 100%;
+   border-radius: 5px;
+   background-color: var(--light-bg);
+   padding: 12px 14px;
+   font-size: 17px;
+   color: var(--black);
+   margin-top: 10px;
+}
+
+.searcher form .flex img {
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-top: 12.5%;
+
+}
+
+.searcher .searcher-select {
+   position: relative;
+   width: 100%;
+   margin-bottom: 20px;
+   height: 40px;
+   border-radius: 5px;
+   background-color: var(--light-bg);
+   border: 1px solid var(--black);
+   overflow: hidden;
+}
+
+.searcher .searcher-select::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 100%;
+   background-color: var(--blue);
+   pointer-events: none;
+   transition: all 0.3s ease;
+   z-index: 2;
+}
+
+.searcher .searcher-select select {
+   width: 100%;
+   height: 100%;
+   background-color: transparent;
+   border: none;
+   outline: none;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   padding: 0 10px;
+   color: var(--black);
+   font-size: 18px;
+   cursor: pointer;
+   z-index: 3;
+}
+
+.searcher .searcher-select select option {
+   background-color: var(--light-bg);
+   color: var(--black);
+   font-size: 18px;
+}
+
+.searcher .searcher-select:hover::before {
+   transform: translateX(-100%);
+}
+
+.main {
+   min-height: 100vh;
+   background-image: url("background/background.jpg");
+   background-color: grey;
+   background-blend-mode: multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.main .profile {
+   padding: 20px;
+   background-color: var(--grey);
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   width: 800px;
+   border-radius: 5px;
+}
+
+.main .profile h1 {
+   color: var(--white);
+}
+
+.main .profile p {
+   margin-top: 20px;
+   color: var(--white);
+   font-size: 20px;
+}
